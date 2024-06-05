@@ -7,13 +7,14 @@
     <title>Lab 9</title>
     <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
     <script>
-      window.TrackJS &&
-        TrackJS.install({
-          token: "da69e9d6f84c445fa5762340f16734a9",
-          // for more configuration options, see https://docs.trackjs.com
-        });
+      window.TrackJS && TrackJS.install({ 
+        token: "46a0d03edeae46f7baa8bff902bd294f"
+        // for more configuration options, see https://docs.trackjs.com
+      });
     </script>
-
+                            
+                            
+             
     <style>
       button {
         margin: 3px;
@@ -188,7 +189,7 @@
         .addEventListener("click", () => console.groupEnd("Console Group"));
       document.getElementById("tableButton").addEventListener("click", () =>
         console.table([
-          { name: "Jack", age: 25 },
+          { name: "Jane", age: 25 },
           { name: "Dave", age: 30 },
         ])
       );
@@ -205,6 +206,7 @@
         .getElementById("globalErrorButton")
         .addEventListener("click", () => {
           throw new Error("Global Error");
+          TrackJS.track('Testing TrackJS!');
         });
     </script>
   </body>
